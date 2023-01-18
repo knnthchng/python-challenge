@@ -46,8 +46,8 @@ print("----------------------------------------------------")
 print(f"The dataset covers a total of {totalmon} months.")
 print(f"The net profit/loss for the covered period is ${netresult}.")
 print(f"The average monthly change in profits/losses was ${avg_change}.")
-print(f"Our greatest profit was of ${maxgain} on {dategain}.")
-print(f"Our greatest loss was of ${maxloss} on {dateloss}.")
+print(f"Our greatest increase in profits was of ${maxgain} on {dategain}.")
+print(f"Our greatest decrease in profits was of ${maxloss} on {dateloss}.")
 
 # Export results in a .txt file
 export = 'Analysis/Financial_Analysis.txt'
