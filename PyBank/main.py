@@ -50,7 +50,7 @@ print(f"Our greatest increase in profits was of ${maxgain} on {dategain}.")
 print(f"Our greatest decrease in profits was of ${maxloss} on {dateloss}.")
 
 # Export results in a .txt file
-export = 'Analysis/Financial_Analysis.txt'
+export = os.path.join('Analysis', 'Financial_Analysis.txt')
 with open(export, 'w') as f:
     f.write("Financial Analysis\n")
     f.write("----------------------------------------------------\n")
