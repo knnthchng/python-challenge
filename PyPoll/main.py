@@ -53,6 +53,8 @@ print("----------------------------------------------------")
 
 # Create .txt file that reads out the analysis
 export = 'Analysis/Election_Results.txt'
+if not os.path.exists('Analysis'):
+    os.mkdir('Analysis')
 with open(export, 'w') as f:
     f.write("Election Results\n")
     f.write("----------------------------------------------------\n")
