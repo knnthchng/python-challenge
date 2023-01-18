@@ -32,13 +32,13 @@ avg_change = round(sum(changes) / int(len(changes)), 2)
 
 # Find the data for greatest profit, greatest loss, and their...
 # ... respective dates.
-for x in range(len(months)):
-    if results[x] == min(results):
-        maxloss = results[x]
-        dateloss = months[x]
-    elif results[x] == max(results):
-        maxgain = results[x]
-        dategain = months[x]
+for x in range(len(changes)):
+    if changes[x] == min(changes):
+        maxloss = changes[x]
+        dateloss = months[x+1]
+    elif changes[x] == max(changes):
+        maxgain = changes[x]
+        dategain = months[x+1]
 
 # Output results into terminal
 print("Financial Analysis")
@@ -54,11 +54,11 @@ export = 'Analysis/Financial_Analysis.txt'
 with open(export, 'w') as f:
     f.write("Financial Analysis\n")
     f.write("----------------------------------------------------\n")
-    f.write(f"The dataset covers a total of {totalmon} months.")
-    f.write(f"The net profit/loss for the covered period is ${sum(results)}.")
-    f.write(f"The average monthly change in profits/losses was ${avg_change}.")
-    f.write(f"Our greatest profit was of ${maxgain} on {dategain}.")
-    f.write(f"Our greatest loss was of ${maxloss} on {dateloss}.")
+    f.write(f"The dataset covers a total of {totalmon} months.\n")
+    f.write(f"The net profit/loss for the covered period is ${sum(results)}.\n")
+    f.write(f"The average monthly change in profits/losses was ${avg_change}.\n")
+    f.write(f"Our greatest profit was of ${maxgain} on {dategain}.\n")
+    f.write(f"Our greatest loss was of ${maxloss} on {dateloss}.\n")
     f.close()
     
 print("----------------------------------------------------")

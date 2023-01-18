@@ -1,3 +1,7 @@
 Financial Analysis
 ----------------------------------------------------
-The dataset covers a total of 86 months.The net profit/loss for the covered period is $22564198.The average monthly change in profits/losses was $-8311.11.Our greatest profit was of $1141840 on Mar-13.Our greatest loss was of $-1194133 on Dec-10.
+The dataset covers a total of 86 months.
+The net profit/loss for the covered period is $22564198.
+The average monthly change in profits/losses was $-8311.11.
+Our greatest profit was of $1862002 on Aug-16.
+Our greatest loss was of $-1825558 on Feb-14.
