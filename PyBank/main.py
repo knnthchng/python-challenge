@@ -1,14 +1,4 @@
-# Pybank.py
-# Create a Python script to analyze the financial records of your company.
-# You'll be using budget_data.csv.
-# The dataset is composed of two columns: "Date" and "Profit/Losses".
-
-# Analyze the records to calculate each of the following values:
-#   The total number of months included in the dataset
-#   The net total amount of "Profit/Losses" over the entire period
-#   The changes in "Profit/Losses" over the entire period, and then the average of those changes
-#   The greatest increase in profits (date and amount) over the entire period
-#   The greatest decrease in profits (date and amount) over the entire period
+# Financial Statement Analysis
 
 # Import necessary modules
 import os
@@ -43,14 +33,20 @@ for x in range(len(months)):
     elif results[x] == max(results):
         maxgain = results[x]
         dategain = months[x]
+
+# Find the total amount of months represented in data set
+totalmon = len(months)
+
+# Find the net total revenues/losses for this dataset
+netresult = sum(results)
         
 print("Financial Analysis")
-print("----------------------------------------------------------")
+print("----------------------------------------------------")
 # Find the total months included in the dataset
-print(f"The dataset covers a total of {len(months)} months.")
+print(f"The dataset covers a total of {totalmon} months.")
 
 # What's the net total revenue/loss for the whole period?
-print(f"The net profit/loss for the covered period is ${sum(results)}.")
+print(f"The net profit/loss for the covered period is ${netresult}.")
 
 # Did the difference calculator work?
 print(f"The average monthly change in profits/losses was ${avg_change}.")
@@ -59,3 +55,17 @@ print(f"The average monthly change in profits/losses was ${avg_change}.")
 print(f"Our greatest profit was of ${maxgain} on {dategain}.")
 print(f"Our greatest loss was of ${maxloss} on {dateloss}.")
 
+# Export results in a .txt file
+export = 'Analysis/Financial_Analysis.txt'
+with open(export, 'w') as f:
+    f.write("Financial Analysis\n")
+    f.write("----------------------------------------------------\n")
+    f.write(f"The dataset covers a total of {totalmon} months.")
+    f.write(f"The net profit/loss for the covered period is ${sum(results)}.")
+    f.write(f"The average monthly change in profits/losses was ${avg_change}.")
+    f.write(f"Our greatest profit was of ${maxgain} on {dategain}.")
+    f.write(f"Our greatest loss was of ${maxloss} on {dateloss}.")
+    f.close()
+    
+print("----------------------------------------------------")
+print("Analysis results exported as .txt file in Analysis folder.")
