@@ -51,6 +51,8 @@ print(f"Our greatest decrease in profits was of ${maxloss} on {dateloss}.")
 
 # Export results in a .txt file
 export = os.path.join('Analysis', 'Financial_Analysis.txt')
+if not os.path.exists('Analysis'):
+    os.mkdir('Analysis')
 with open(export, 'w') as f:
     f.write("Financial Analysis\n")
     f.write("----------------------------------------------------\n")
