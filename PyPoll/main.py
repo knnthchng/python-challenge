@@ -22,7 +22,7 @@ votetotal = len(cand_total)
 
 # Get the unique list of candidates
 cand_set = set(cand_total)
-cand_names = list(cand_set)
+cand_names = sorted(list(cand_set))
 
 # Calculate total votes (and percentages) for each candidate
 cand0_total = cand_total.count(cand_names[0])
